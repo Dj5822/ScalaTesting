@@ -6,6 +6,12 @@ val is final.
 var is variable.
 */
 
+class Slime(name: String, hp: Int, mp: Int):
+  def printStatus() = 
+    println(s"Name: ${name}")
+    println(s"HP: ${hp}")
+    println(s"MP: ${mp}")
+
 def controlTesting(): Unit =
   if true then print("true\n") else print("false\n")
   
@@ -29,4 +35,6 @@ def sumToNumbers(): Unit =
   println("Result: " + num1 + " + " + num2 + " = " + (num1.toInt + num2.toInt))
 
 @main def start(): Unit = 
-  controlTesting()
+  val slime1 = new Slime("Rimiru Tempest", 1000, 100)
+  slime1.printStatus()
+
